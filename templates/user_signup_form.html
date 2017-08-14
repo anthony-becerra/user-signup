@@ -1,0 +1,38 @@
+{% extends "base.html" %} <!--Bring in boiler plate html code from base.html --> 
+
+{% block content %}
+    <h1>Signup</h1>
+    <form method="POST">
+        <table>
+            <tr>
+                <td><label for="username">Username</label></td>
+                <td>
+                    <input id="username" name="username" type="text" value="{{username}}">
+                    <span class="error">{{username_error}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td>
+                    <input id="password" name="password" type="password">
+                    <span class="error">{{password_error}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="verify">Verify Password</label></td>
+                <td>
+                    <input id="verify" name="verify" type="password">
+                    <span class="error">{{verify_password_error}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email (optional)</label></td>
+                <td>
+                    <input id="email" name="email" type="text" value="{{email}}">
+                    <span class="error">{{email_error}}</span>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" />
+        </form>
+{% endblock %}
